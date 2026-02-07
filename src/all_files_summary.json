@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Feature evidence describing a requirement to replace a thank‑you screen sentence with a provided custom message in App.tsx.",
+  "frontend-file-summaries.txt": "Text file containing prewritten summaries of key frontend components and styles.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH color variables, light/dark themes, and global style resets.",
+  "frontend/index.html": "HTML entry point loading the React app through main.tsx.",
+  "frontend/src/App.tsx": "Main React component toggling between the apology interaction and the forgiveness screen with animations and a custom message.",
+  "frontend/src/components/ApologyInteraction.tsx": "Interactive component showing Yes/No buttons where No moves randomly and prompts escalate.",
+  "frontend/src/components/FallingEmojis.tsx": "Continuously spawns and animates falling sad emojis after forgiveness.",
+  "frontend/src/components/HeartsBurst.tsx": "Creates a short-lived animated burst of hearts when forgiveness is granted.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous backend actor using react-query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for managing Internet Identity authentication and login state.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file exporting nothing because no backend queries are required.",
+  "frontend/src/index.css": "Defines Tailwind layers, custom OKLCH theme variables for light/dark modes, global styles, and animations for hearts, floating, and falling emojis.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClientProvider and InternetIdentityProvider, then renders App.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors mapped to CSS variables, extended animations, typography, container queries, and plugins.",
+  "project_state.json": "Describes project state, features, and notes for an interactive apology app including behavior, animations, and final message requirements."
+}

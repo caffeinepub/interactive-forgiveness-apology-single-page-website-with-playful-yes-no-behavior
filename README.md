@@ -1,2 +1,3 @@
-# interactive-forgiveness-apology-single-page-website-with-playful-yes-no-behavior
-Exported from Caffeine project: Interactive forgiveness (apology) single-page website with playful Yes/No behavior and falling emojis
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
