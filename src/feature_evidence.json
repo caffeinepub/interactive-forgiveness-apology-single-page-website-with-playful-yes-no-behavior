@@ -1,23 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-in-the-forgiveness-thank-you-screen-shown-after-clicking-yes-the-forgiven-state-in-frontend-src-app-tsx-replace-the-current-sentence-i-never-doubted-you-not-even-for-a-moment-with-the-user-s-exact-provided-sentence-below-preserving-it-exactly-as-written-no-translation-no-rewording-keep-punctuation-casing-spacing-as-provided-sorry-mujhe-maaf-kardo-mere-bolne-se-aapko-shak-lagta-hai-but-mai-nahi-karta-hun-shak-aapse-sorry-kiki-aaj-se-try-karunga-sahi-se-baat-karna-i-m-really-sorry-aapko-asa-feel-karane-keliye",
-      "featureTitle": "In the forgiveness/thank-you screen shown after clicking \"Yes\" (the forgiven state in frontend/src/App.tsx), replace the current sentence \"I never doubted you, not even for a moment. 💕\" with the user's exact provided sentence below, preserving it exactly as written (no translation, no rewording, keep punctuation/casing/spacing as provided): \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karna I'm really sorry aapko asa feel karane keliye\".",
-      "files": [
-        "frontend/src/App.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }

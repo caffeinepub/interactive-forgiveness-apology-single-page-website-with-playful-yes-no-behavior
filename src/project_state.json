@@ -1,11 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 19,
   "summary": "Interactive apology/forgiveness website that asks 'Will you forgive me?' with Yes/No buttons; the No button avoids clicks and prompts reconsideration until Yes is clicked, then shows a cute animation, a thank-you/apology message in Hindi/Urdu mix, and endless falling crying/sad emojis.",
   "architectural_notes": [
-    "Update the final post-\"Yes\" message text: replace \"I never doubted you, not even for a moment.\" with the user-provided sentence (keep as-is; do not translate): \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karna I'm really sorry aapko asa feel karane keliye\""
+    "Update the final post-\"Yes\" message text: remove the sentence \"From today, I will change the way I speak.\" (including the 🙏 emoji) from the displayed message.",
+    "Update the final post-\"Yes\" message text: remove the sentence \"Thank you so much for forgiving me. 😢\" from the displayed message.",
+    "Update the final post-\"Yes\" message text: replace the previously user-provided sentence with this new exact sentence (keep as-is; do not translate): \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karne ka,  I'm really sorry aapko asa feel karane keliye\"",
+    "Adjust the post-\"Yes\" begging cat animation placement so it does not block the text; position it below the text near the bottom of the screen/container.",
+    "Deployment/publish domain selected by user: \"sorrykiki\".",
+    "Publishing domain constraint: must be 5–50 characters and contain only letters, numbers, and hyphens (no spaces/parentheses).",
+    "User confirmed to publish/deploy using domain: \"sorrykiki\" (exact string)."
   ],
-  "known_issues": [],
+  "known_issues": [
+    "Begging cat animation currently overlaps/blocks the apology/thank-you text on the forgiven screen; needs repositioning below."
+  ],
   "isFixRequest": false,
   "existing_features": [
     {
@@ -55,6 +63,62 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-in-the-post-yes-forgiveness-thank-you-screen-the-forgiven-state-in-frontend-src-app-tsx-remove-the-sentence-from-today-i-will-change-the-way-i-speak-so-it-is-no-longer-displayed-to-the-user",
+      "title": "In the post-\"Yes\" forgiveness/thank-you screen (the forgiven state) in frontend/src/App.tsx, remove the sentence \"From today, I will change the way I speak. 🙏\" so it is no longer displayed to the user.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-post-yes-forgiven-thank-you-screen-in-frontend-src-app-tsx-remove-the-sentence-thank-you-so-much-for-forgiving-me-so-it-is-no-longer-displayed-to-the-user",
+      "title": "In the post-\"Yes\" forgiven/thank-you screen in frontend/src/App.tsx, remove the sentence \"Thank you so much for forgiving me. 😢\" so it is no longer displayed to the user.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-post-yes-forgiven-thank-you-screen-the-forgiven-state-in-frontend-src-app-tsx-replace-the-currently-displayed-custom-apology-sentence-with-the-new-user-provided-sentence-below-preserving-it-exactly-as-written-no-translation-no-rewording-keep-punctuation-casing-spacing-as-provided-sorry-mujhe-maaf-kardo-mere-bolne-se-aapko-shak-lagta-hai-but-mai-nahi-karta-hun-shak-aapse-sorry-kiki-aaj-se-try-karunga-sahi-se-baat-karne-ka-i-m-really-sorry-aapko-asa-feel-karane-keliye",
+      "title": "In the post-\"Yes\" forgiven/thank-you screen (the forgiven state) in frontend/src/App.tsx, replace the currently displayed custom apology sentence with the new user-provided sentence below, preserving it exactly as written (no translation, no rewording, keep punctuation/casing/spacing as provided): \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karne ka,  I'm really sorry aapko asa feel karane keliye\".",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-emotional-begging-cat-animation-to-the-forgiven-thank-you-screen-shown-after-clicking-yes-the-animation-must-be-visible-on-the-forgiven-screen-loop-smoothly-and-match-the-existing-cute-pastel-theme-without-blocking-user-interactions",
+      "title": "Add an emotional \"begging cat\" animation to the forgiven/thank-you screen shown after clicking \"Yes\". The animation must be visible on the forgiven screen, loop smoothly, and match the existing cute/pastel theme without blocking user interactions.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-on-the-post-yes-forgiven-thank-you-screen-reposition-the-begging-cat-animation-so-it-renders-visually-below-the-text-content-at-the-bottom-of-the-card-screen-area-and-does-not-overlap-or-block-any-of-the-apology-thank-you-text",
+      "title": "On the post-\"Yes\" forgiven/thank-you screen, reposition the \"begging cat\" animation so it renders visually below the text content (at the bottom of the card/screen area) and does not overlap or block any of the apology/thank-you text.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-publish-deploy-the-current-version-of-the-interactive-apology-single-page-website-so-it-is-publicly-accessible",
+      "title": "Publish/deploy the current version of the interactive apology single-page website so it is publicly accessible.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-publish-deploy-the-current-interactive-apology-single-page-website-using-the-user-selected-domain-name-sorrykiki-ensuring-the-publish-step-succeeds-under-the-platform-domain-rules-5-50-characters-letters-numbers-hyphens-only",
+      "title": "Publish/deploy the current interactive apology single-page website using the user-selected domain name \"Sorrykiki\", ensuring the publish step succeeds under the platform domain rules (5–50 characters, letters/numbers/hyphens only).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -79,6 +143,30 @@
     {
       "id": "AR-4",
       "summary": "Add endless falling crying/sad emojis effect on the page (especially after Yes)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Remove the sentence \"From today, I will change the way I speak.\" from the final post-\"Yes\" forgiveness/thank-you message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Remove the sentence \"Thank you so much for forgiving me. 😢\" from the final post-\"Yes\" forgiveness/thank-you message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add an emotional 'begging cat' style animation on the post-\"Yes\" forgiven screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Publish/deploy the apology single-page website (run build and make it live)",
       "reqIds": [],
       "status": "pending"
     }

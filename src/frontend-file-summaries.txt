@@ -1,9 +1,12 @@
 {
-  "frontend/src/App.tsx": "Main application component managing forgiveness state, rendering either the interactive apology or the thank-you message with the user's custom heartfelt message in mixed Hindi-English, along with animations and falling emojis.",
+  "frontend/src/App.tsx": "Main application component managing forgiveness state with improved layout spacing and padding to ensure the begging cat animation stays below all text content without overlapping across all viewport sizes.",
   "frontend/src/components/ApologyInteraction.tsx": "Interactive component with Yes/No buttons where the No button evades clicks by moving to random positions within a bounded container, displaying escalating prompts.",
   "frontend/src/components/HeartsBurst.tsx": "Animated hearts burst effect component that displays 20 hearts radiating outward for 1.5 seconds when forgiveness is granted.",
   "frontend/src/components/FallingEmojis.tsx": "Continuous falling sad emoji overlay that spawns crying/sad emojis from the top of the screen in an endless loop without blocking interactions.",
-  "frontend/src/index.css": "Global styles with warm pastel pink/peach/cream OKLCH color palette, custom animations for hearts burst, floating, and falling emojis.",
+  "frontend/src/index.css": "Global styles with warm pastel OKLCH color system, custom animations for hearts burst, floating, falling emojis, and new begging cat animations (bobbing, paw begging, tail wagging, and tear drops).",
   "frontend/tailwind.config.js": "Tailwind configuration with Inter font family and extended theme matching the warm romantic aesthetic.",
-  "frontend/src/hooks/useQueries.ts": "Empty hooks file as no backend queries are needed for this purely frontend interactive experience."
+  "frontend/src/hooks/useQueries.ts": "Empty hooks file as no backend queries are needed for this purely frontend interactive experience.",
+  "frontend/src/components/BeggingCatAnimation.tsx": "Reusable React component that renders a cute pastel begging cat with pleading eyes, tears, and animated paws in a looping animation, now positioned in normal document flow below the forgiven card text using flexbox centering instead of absolute positioning.",
+  "frontend/index.html": "Production-ready HTML entry point with proper DOCTYPE, meta tags, and semantic structure for deployment.",
+  "frontend/DEPLOYMENT.md": "Comprehensive deployment guide with step-by-step instructions for building the production bundle, deploying to Internet Computer with the custom domain \"Sorrykiki\" (including domain validation rules: 5-50 chars, letters/numbers/hyphens only), obtaining the shareable public URL, and a detailed verification checklist that confirms the public URL loads and the Yes/No interaction works as expected."
 }

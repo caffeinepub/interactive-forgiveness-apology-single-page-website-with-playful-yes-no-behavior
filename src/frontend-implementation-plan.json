@@ -1,23 +1,6 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update forgiven-state message text to exact user-provided sentence",
-  "requirements": [
-    {
-      "id": "REQ-6",
-      "summary": "Replace the forgiven-state sentence in the post-\"Yes\" thank-you screen with the exact user-provided text rendered verbatim.",
-      "acceptanceCriteria": [
-        "After clicking \"Yes\", the forgiven-state message contains the exact text: \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karna I'm really sorry aapko asa feel karane keliye\".",
-        "The previous sentence \"I never doubted you, not even for a moment. 💕\" is no longer shown anywhere in the forgiven-state message.",
-        "The inserted text is not translated or altered by any localization/formatting logic (it renders verbatim in the UI)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "In the forgiven-state (the screen rendered when `forgiven` is true after clicking \"Yes\"), replace the existing sentence \"I never doubted you, not even for a moment. 💕\" with the exact provided sentence, preserving punctuation/casing/spacing exactly and ensuring it is rendered as a plain string with no localization/transformation."
-        }
-      ]
-    }
-  ]
+  "title": "Publish apology site under custom domain slug \"sorrykiki\"",
+  "requirements": []
 }

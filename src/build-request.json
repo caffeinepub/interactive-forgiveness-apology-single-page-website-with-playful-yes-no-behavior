@@ -1,33 +1,17 @@
 {
   "kind": "build_request",
-  "title": "Update forgiven-state message text to the user's exact sentence (no translation)",
+  "title": "Publish the apology site under the custom domain \"sorrykiki\"",
   "priority": "normal",
-  "requirements": [
-    {
-      "id": "REQ-6",
-      "text": "In the forgiveness/thank-you screen shown after clicking \"Yes\" (the forgiven state in frontend/src/App.tsx), replace the current sentence \"I never doubted you, not even for a moment. 💕\" with the user's exact provided sentence below, preserving it exactly as written (no translation, no rewording, keep punctuation/casing/spacing as provided): \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karna I'm really sorry aapko asa feel karane keliye\".",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "Instead of this Sentence write what i say sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karna I'm really sorry aapko asa feel karane keliye add This sentence don't translate"
-        ]
-      },
-      "acceptanceCriteria": [
-        "After clicking \"Yes\", the forgiven-state message contains the exact text: \"sorry mujhe maaf kardo, mere bolne se aapko shak lagta hai but mai nahi karta hun shak aapse , sorry kiki aaj se try karunga sahi se baat karna I'm really sorry aapko asa feel karane keliye\".",
-        "The previous sentence \"I never doubted you, not even for a moment. 💕\" is no longer shown anywhere in the forgiven-state message.",
-        "The inserted text is not translated or altered by any localization/formatting logic (it renders verbatim in the UI)."
-      ]
-    }
-  ],
+  "requirements": [],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT."
+    "Do not introduce any new backend canisters or services; keep the existing single-actor Motoko backend architecture unchanged.",
+    "Do not edit any files under frontend/immutablePaths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui).",
+    "Use the custom domain slug exactly as \"sorrykiki\" (lowercase), and ensure it conforms to domain rules (5–50 characters, letters/numbers/hyphens only).",
+    "Use English for any user-facing text in any new or modified UI (no new UI copy is requested for this publish-only step)."
   ],
   "nonGoals": [
-    "Changing the Yes/No interaction behavior, animations (HeartsBurst), or the FallingEmojis effect.",
-    "Adding backend storage or any Motoko changes."
+    "Changing the app’s UI/UX, text content, animations, or styling beyond what is necessary to complete the publish step.",
+    "Adding new features unrelated to publishing (e.g., new pages, auth flows, storage)."
   ],
   "imageRequirements": {
     "required": [],
